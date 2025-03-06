@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="menu.js" defer></script>
+    <title>Habilidades e menu lateral</title>
+</head>
+<body>
+    <nav class="menu" id="menu">
+        <div class="icone">
+            <i class="bi bi-list" id="expandir"></i>
+        </div>
+        <ul>
+            <li class="item ativo">
+                <a href="#">
+                    <span class="icone-item"><i class="bi bi-house-door"></i></span>
+                    <span class="texto">Home</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <span class="icone-item"><i class="bi bi-caret-up-square-fill"></i></span>
+                    <span class="texto">Skills</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <span class="icone-item"><i class="bi bi-c-circle-fill"></i></span>
+                    <span class="texto">Rodapé</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="relogio">
+            <div>
+                <span id="horas">00</span>
+            </div>
+            <div>
+                <span id="minutos">00</span>
+            </div>
+            <div>
+                <span id="segundos">00</span>
+            </div>
+        </div>
+        <div class="skill">
+            <h1>Minhas <span></span></h1>
+            <ul>
+                <li>
+                    <h3>HTML</h3>
+                    <span class="barras"><span class="html"></span></span>
+                </li>
+                <li>
+                    <h3>CSS</h3>
+                    <span class="barras"><span class="css"></span></span>
+                </li>
+                <li>
+                    <h3>JAVASCRIPT</h3>
+                    <span class="barras"><span class="js"></span></span>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

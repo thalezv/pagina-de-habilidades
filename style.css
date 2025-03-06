@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+}
+
+.menu{
+    width: 70px;
+    height: 100%;
+    background-color: black;
+    padding: 40px 0 0 1%;
+    box-shadow: 3px 0 0 greenyellow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 99999;
+}
+
+.menu.expandiu{
+    width: 200px;
+}
+
+.icone{
+    width: 100%;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+.icone i{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu ul{
+    height: 100%;
+}
+
+.menu ul li{
+    transition: .2s;
+}
+
+.menu ul .ativo{
+    background-color: greenyellow;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.menu ul .ativo a{
+    color: black;
+}
+
+.menu ul li:hover{
+    background-color: greenyellow;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+.menu ul li a .texto{
+    margin-left: 20px;
+}
+
+.menu ul li a .icone-item{
+    font-size: 30px;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relogio{
+    width: 100px;
+    height: 30px;
+    padding: 0 5px;
+    background-color: beige;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    z-index: 88888;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.116);
+}
+
+.relogio div{
+    height: 20px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.116);
+}
+
+.skill{
+    width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.116);
+}
+
+ul{
+    list-style: none;
+}
+
+.skill ul li{
+    margin: 20px 0;
+}
+
+.skill .barras{
+    background-color: grey;
+    display: block;
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 10px;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.barras span{
+    height: 20px;
+    background: linear-gradient(to right, orange, red);
+    position: absolute;
+}
+
+.html{
+    width: 85%;
+    animation: html 3s;
+}
+
+.css{
+    width: 85%;
+    animation: css 3s;
+}
+
+.js{
+    width: 70%;
+    animation: js 3s;
+}
+
+.skill h1 span::before{
+    content: "";
+    color: greenyellow;
+    animation: palavra 4s infinite alternate;
+}
+
+.skill h1 span::after{
+    margin-left: 3px;
+    content: "";
+    position: absolute;
+    height: 35px;
+    border-left: 2px solid greenyellow;
+    opacity: 1;
+    animation: cursor .8s infinite ;
+}
+
+@keyframes cursor {
+    0%{
+        opacity: 0;
+    }
+}
+
+@keyframes palavra {
+    0%{
+        content: "";
+    }
+
+    9%{
+        content: "H";
+    }
+
+    18%{
+        content: "Ha";
+    }
+    
+    27%{
+        content: "Hab";
+    }
+
+    36%{
+        content: "Habi";
+    }
+
+    45%{
+        content: "Habil";
+    }
+
+    54%{
+        content: "Habili";
+    }
+
+    64%{
+        content: "Habilid";
+    }
+
+    73%{
+        content: "Habilida";
+    }
+
+    82%{
+        content: "Habilidad";
+    }
+
+    91%{
+        content: "Habilidade";
+    }
+    
+    100%{
+        content: "Habilidades";
+    }
+}
+
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%
+    }
+}
+
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%
+    }
+}
+
+@keyframes js {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .menu{
+        width: 40px;
+    }
+
+    .skill{
+        margin-left: 13%;
+        margin-right: 3%;
+    }
+
+    h1{
+        font-size: 28px;
+    }
+
+    .skill h1 span::after{
+        height: 28px;
+    }
+}
